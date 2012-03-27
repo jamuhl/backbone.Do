@@ -13,6 +13,15 @@ To configure Backbone.Do you got to init the `Backbone.Do.hub`.
 	// you can go with defaults
 	Backbone.Do.hub.init();
 
+Now you're ready to bind you websocket implementation to:
+
+	// in
+	Backbone.Do.hub.emit('done', myResponse);
+	
+	// out
+	Backbone.Do.hub.on('do', function(req) {
+		// forward req
+	)};
 
 ## MESSAGE HANDLING
 
